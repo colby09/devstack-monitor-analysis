@@ -1,0 +1,14 @@
+# DevStack Health Monitor Plugin Settings
+
+# Repository settings
+HEALTH_MONITOR_REPO=${HEALTH_MONITOR_REPO:-https://github.com/your-username/devstack-health-monitor.git}
+}
+HEALTH_MONITOR_BRANCH=${HEALTH_MONITOR_BRANCH:-main}
+
+# Service settings
+HEALTH_MONITOR_PORT=${HEALTH_MONITOR_PORT:-8080}
+HEALTH_MONITOR_INTERVAL=${HEALTH_MONITOR_INTERVAL:-30}
+HEALTH_MONITOR_ENABLE_ALERTS=${HEALTH_MONITOR_ENABLE_ALERTS:-True}
+
+# Enable the plugin
+enable_plugin devstack-health-monitor $HEALTH_MONITOR_REPO $HEALTH_MONITOR_BRANCH
